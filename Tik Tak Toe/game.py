@@ -83,10 +83,10 @@ class TikTakToe(QWidget):
             self.buttons[index].setText(self.current_player.letter)
             self.buttons[index].setEnabled(False)
             if self.check_winner():
-                QMessageBox.information(self, "Game Over", f"Player {self.current_player.letter} wins!")
+                QMessageBox.about(self, "Game Over", f"Player {self.current_player.letter} wins!")
                 self.reset_game()
             elif ' ' not in self.board:
-                QMessageBox.information(self, "Game Over", "It's a draw!")
+                QMessageBox.about(self, "Game Over", "It's a draw!")
                 self.reset_game()
             else:
                 self.switch_player()
